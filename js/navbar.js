@@ -11,19 +11,25 @@ function display_navbar() {
                             <a class='nav-link' href='./basic.html'>Basic</a>\
                         </li>\
                         <li class='nav-item'>\
-                            <a class='nav-link' href='./wifi.html'>WiFi</a>\
+                            <a class='nav-link disabled' href='./link.html'>Link</a>\
                         </li>\
                         <li class='nav-item'>\
-                            <a class='nav-link' href='#'>Email</a>\
+                            <a class='nav-link disabled' href='./wifi.html'>WiFi</a>\
                         </li>\
                         <li class='nav-item'>\
-                            <a class='nav-link' href='#'>SMS</a>\
+                            <a class='nav-link disabled' href='./phone.html'>Phone</a>\
                         </li>\
                         <li class='nav-item'>\
-                            <a class='nav-link' href='#'>VCard</a>\
+                            <a class='nav-link disabled' href='./sms.html'>SMS</a>\
                         </li>\
                         <li class='nav-item'>\
-                            <a class='nav-link' href='#'>Cryptocurrency</a>\
+                            <a class='nav-link disabled' href='./email.html'>Email</a>\
+                        </li>\
+                        <li class='nav-item'>\
+                            <a class='nav-link disabled' href='./vcard.html'>VCard</a>\
+                        </li>\
+                        <li class='nav-item'>\
+                            <a class='nav-link disabled' href='./vcard.html'></a>\
                         </li>\
                     </ul>\
                 </div>\

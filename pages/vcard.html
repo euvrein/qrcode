@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>QR Code Generator</title>
+        
+        <link rel="stylesheet" href="../css/bootstrap.min.css" /> <!-- Version 4.5.2-->
+        <link rel='stylesheet' href="../css/styles.css" />
+
+        <link href="../assets/fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+        <link href="../assets/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
+    
+    </head>
+    <body>
+        <nav id="navbar_div"></nav>
+        <div class="container text-center">
+            <div id="qrcodecard">
+                <div class="card mt-3 mb-3">
+                    <div class="card-header bg-dark">
+                        <strong class="text-white">
+                            QR Code Generator
+                        </strong>
+                    </div>
+                    <div class="card-body">
+                        <div id="locally-generated-qrcode">
+                            <div id="qrcodelocal"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light">
+                        <span id="qrcode-header">
+                                VCard QR Code
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form id='qrcode-form' class="col-12">
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-firstname"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" id="txtFirstName" class="form-control" placeholder="First Name" aria-label="first-name" aria-describedby="vcard-firstname">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-lastname"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" id="txtLastName" class="form-control" placeholder="Last Name" aria-label="last-name" aria-describedby="vcard-firstname">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-tel-mobile"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                            <input type="text" id="txtMobile" class="form-control" placeholder="Mobile" aria-label="tel-work" aria-describedby="vcard-tel-mobile">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-tel-phone"><i class="fa-solid fa-phone"></i></span>
+                            <input type="text" id="txtPhone" class="form-control" placeholder="Phone" aria-label="tel-phone" aria-describedby="vcard-tel-phone">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-tel-fax"><i class="fa-solid fa-fax"></i></span>
+                            <input type="text" id="txtFax" class="form-control" placeholder="Fax" aria-label="tel-fax" aria-describedby="vcard-tel-fax">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-organization"><i class="fa-solid fa-building"></i></span>
+                            <input type="text" id="txtOrganization" class="form-control" placeholder="Company Name" aria-label="organization" aria-describedby="vcard-organization">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-title"><i class="fa-solid fa-id-card-clip"></i></span>
+                            <input type="text" id="txtTitle" class="form-control" placeholder="Job Title" aria-label="title" aria-describedby="vcard-title">
+                        </div>                        
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-email"><i class="fa-solid fa-at"></i></span>
+                            <input type="text" id="txtEmail" class="form-control" placeholder="Email Address" aria-label="email" aria-describedby="vcard-email">
+                        </div>                        
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-address"><i class="fa-solid fa-map-location-dot"></i></span>
+                            <input type="text" id="txtAddress" class="form-control" placeholder="Address" aria-label="address" aria-describedby="vcard-address">
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text" id="vcard-tel-url"><i class="fa-solid fa-globe"></i></span>
+                            <input type="text" id="txtURL" class="form-control" placeholder="Website" aria-label="url" aria-describedby="vcard-url">
+                        </div>
+                        <div class="form-group mt-2 p-1">
+                            <button id="btn-download-qr-code" class="btn btn-outline-success w-100">Download QR Code</button>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        <div id="footer_div"></div>
+        
+        <script src="../js/jquery.min.js" ></script> <!-- Version 3.5.1 -->
+        <script src="../js/popper.min.js" ></script> <!--Version 1.16.0-->
+        <script src="../js/bootstrap.bundle.min.js" ></script> <!--Version 5.3.3-->
+        <script src="../js/dom-to-image.js" ></script> <!--Version 2.6.0-->
+        <script src="../js/qrcode.min.js" ></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/navbar.js"></script>
+        <script src="../js/footer.js"></script>
+
+        
+        <script src="../js/autostart.js" defer ></script>
+    </body>
+</html>
+
+<!-- https://quickchart.io/documentation/vcard-qr-codes/ -->

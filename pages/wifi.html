@@ -8,6 +8,9 @@
         
         <link rel="stylesheet" href="../css/bootstrap.min.css" /> <!-- Version 4.5.2-->
         <link rel='stylesheet' href="../css/styles.css" />
+        
+        <link href="../assets/fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+        <link href="../assets/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
     </head>
     <body>
         <nav id="navbar_div"></nav>
@@ -36,7 +39,7 @@
                 <div class="col-md-6">
                     <form id='qrcode-form' class="col-12">
                         <div class="input-group p-1">
-                            <span class="input-group-text" id="wifi-encryption">@</span>
+                            <span class="input-group-text" id="wifi-encryption"><i class="fa-solid fa-shield"></i></span>
                             <select class="form-select" id="Encryption" aria-describedby="wifi-encryption">
                                 <option disabled>Encryption</option>
                                 <option value="WPA2-EAP">WPA2-EAP</option>
@@ -45,11 +48,11 @@
                                 <option value="nopass">None</option>
                             </select></div>
                         <div class="input-group p-1">
-                            <span class="input-group-text" id="wifi-SSID">@</span>
+                            <span class="input-group-text" id="wifi-SSID"><i class="fa-solid fa-wifi"></i></span>
                             <input type="text" id="txtSSID" class="form-control" placeholder="SSID" aria-label="SSID" aria-describedby="wifi-SSID">
                         </div>
                         <div class="input-group p-1">
-                            <span class="input-group-text" id="wifi-pass">@</span>
+                            <span class="input-group-text" id="wifi-pass"><i class="fa-solid fa-key"></i></span>
                             <input type="text" id="txtPass" class="form-control" placeholder="Passkey" aria-label="Pass" aria-describedby="wifi-pass">
                         </div>
                         <div class="form-group mt-2 p-1">
