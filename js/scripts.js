@@ -4,20 +4,6 @@ var qrcode = new QRCode(qrcodelocal, {
     height : 300
 });
 
-$("#qrcode-form").submit(function(e){
-    e.preventDefault();
-});
-
-function generateQRCodes(data){
-    console.log("Generating: " + data);
-    generateQRviaLocalJS(data);
-    generateQRviaAPI(data);
-}
-
-$("#btn-download-qr-code").click(function() {
-    downloadQRCode();
-});
-
 function generateQRviaLocalJS(data){
     qrcode.makeCode(data);
 }
@@ -32,7 +18,7 @@ function generateQRviaAPI(data){
 }
 
 function downloadQRCode() {
-    var qrcodecard = document.getElementById('qrcodecard');
+    var qrcodecard = document.getElementById('qrcode');
 
     domtoimage.toPng(qrcodecard)
         .then(function (dataUrl) {

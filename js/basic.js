@@ -1,16 +1,12 @@
-$('#txtInput').keyup(function(){
-    let data = $("#txtInput").val();
-    if($("#txtInput").val()==""){
-        $('#btn-download-qr-code').prop('disabled', true);
-    } else {
-        $('#btn-download-qr-code').prop('disabled', false);
-        generateQRCodes(data);
-    }
-});
+function generateQRCode(){
+    let data = "";
+    let text = $("#txtText").val();
 
-$("#btn-download-qr-code").click(function() {
-    downloadQRCode();
-});
+    data = text;
+
+    generateQRviaLocalJS(data);
+    generateQRviaAPI(data);
+}
 
 function generateQRviaLocalJS(data){
     qrcode.makeCode(data);
@@ -25,25 +21,10 @@ function generateQRviaAPI(data){
     $("#qrcodeapi").attr("src",url);
 }
 
-function downloadQRCode() {
-    var qrcodecard = document.getElementById('qrcodecard');
+$("#qrcode-form").submit(function(e){
+    e.preventDefault();
+});
 
-    domtoimage.toPng(qrcodecard)
-        .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-            downloadURI(dataUrl, "qrcode.png")
-        })
-        .catch(function (error) {
-            console.error('Error!', error);
-        });
-}
-
-function downloadURI(uri, name) {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
+$("#btn-download-qr-code").click(function() {
+    downloadQRCode();
+});
