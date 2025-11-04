@@ -11,7 +11,7 @@ function display_navbar() {
                             <a class='nav-link' href='./basic.html'>Basic</a>\
                         </li>\
                         <li class='nav-item'>\
-                            <a class='nav-link disabled' href='./link.html'>Link</a>\
+                            <a class='nav-link' href='./link.html'>Link</a>\
                         </li>\
                         <li class='nav-item'>\
                             <a class='nav-link disabled' href='./wifi.html'>WiFi</a>\

@@ -1,7 +1,7 @@
 var qrcodelocal = $("#qrcodelocal")[0];
 var qrcode = new QRCode(qrcodelocal, {
-    width : 300,
-    height : 300
+    width : 220,
+    height : 220
 });
 
 function generateQRviaLocalJS(data){

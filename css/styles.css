@@ -3,3 +3,10 @@ img{
     max-height: 300px;
     margin: auto;
 }
+
+.qrcode {
+    background-color: #fff;
+    width: 80%;
+    max-width: 350px;
+    margin: auto;
+}
